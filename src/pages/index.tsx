@@ -1,15 +1,17 @@
 import { type NextPage } from "next";
 import Head from "next/head";
+import { useRouter } from "next/router";
 import { useState } from "react";
 import { trpc } from "../utils/trpc";
 
 const Home: NextPage = () => {
   const snippetMutation = trpc.snippet.saveSnippet.useMutation();
-
+  const router = useRouter();
   const [text, setText] = useState("");
   const handleSaveSnippet = async () => {
     const snippetId = await snippetMutation.mutateAsync({ text });
-    console.log(snippetId);
+
+    router.push(`/snippets/${snippetId}`);
   };
 
   return (

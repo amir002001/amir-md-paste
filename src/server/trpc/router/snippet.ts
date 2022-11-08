@@ -1,3 +1,4 @@
+import { prisma } from "./../../db/client";
 import type { Snippet } from "@prisma/client";
 import { z } from "zod";
 
@@ -13,5 +14,15 @@ export const snippetRouter = router({
         },
       });
       return snippet.id;
+    }),
+  getSnippet: publicProcedure
+    .input(z.object({ id: z.string() }))
+    .query(async ({ ctx, input }) => {
+      const snippet = await ctx.prisma.snippet.findUnique({
+        where: {
+          id: input.id,
+        },
+      });
+      return snippet;
     }),
 });
