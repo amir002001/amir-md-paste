@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&display=swap");
+
+@layer base {
+  body,
+  html {
+    @apply m-0 h-screen w-screen dark:bg-gray-800 bg-gray-300;
+    font-family: "Roboto Mono", monospace;
+    
+  }
+
+  * {
+    @apply box-border outline-none;
+  }
+}
+
+@layer components {
+  .bintext {
+    @apply block w-full rounded-md p-2 dark:text-white 
+    dark:bg-gray-700; 
+  }
+
+  .button {
+    @apply rounded-md bg-gray-500 p-2;
+  }
+}
