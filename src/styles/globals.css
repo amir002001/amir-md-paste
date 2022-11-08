@@ -18,11 +18,12 @@
 
 @layer components {
   .bintext {
-    @apply block w-full rounded-md p-2 dark:text-white 
-    dark:bg-gray-700; 
+    @apply block w-full rounded-md p-2
+    dark:text-white dark:bg-gray-700; 
   }
 
   .button {
-    @apply rounded-md bg-gray-500 p-2;
+    @apply rounded-md bg-gray-500 p-2
+    dark:text-white;
   }
 }
