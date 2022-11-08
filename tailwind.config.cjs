@@ -5,8 +5,8 @@ module.exports = {
     extend: {
       colors: {
         primary: "#BE00FF",
-      }
+      },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
