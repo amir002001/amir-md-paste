@@ -29,7 +29,7 @@ const SnippetPage = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="container flex flex-col space-y-3 p-4">
+      <main className="container flex flex-col space-y-3 p-4 mx-auto">
         <h1
           className="
           dark:text-white"
@@ -38,7 +38,7 @@ const SnippetPage = () => {
         </h1>
         <div className="bintext flex">
           <p
-            className="truncate
+            className="truncate grow
           dark:text-white"
           >
             {basepath + router.asPath}
